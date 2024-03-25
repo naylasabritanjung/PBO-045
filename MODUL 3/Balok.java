@@ -38,11 +38,11 @@ public class Balok extends BangunRuang{
     public void inputNilai () {
         super.inputNilai();
         System.out.print("Input panjang: ");
-        panjang = scanner.nextInt();
+        panjang = scanner.nextDouble();
         System.out.print("Input lebar: ");
-        lebar = scanner.nextInt();
+        lebar = scanner.nextDouble();
         System.out.print("Input tinggi: ");
-        tinggi = scanner.nextInt();
+        tinggi = scanner.nextDouble();
     }
 
     @Override

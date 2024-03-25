@@ -5,7 +5,6 @@ public class Tabung extends BangunRuang {
         super(name);
     }
 
-    //public class Tabung () {
     Scanner scanner = new Scanner(System.in);
     private double tinggi;
     private double jariJari;
@@ -28,11 +27,11 @@ public class Tabung extends BangunRuang {
 
     @Override
     public void inputNilai(){
-        super.luasPermukaan();
+        super.inputNilai();
         System.out.print("Input tinggi: ");
-        tinggi = scanner.nextInt();
+        tinggi = scanner.nextDouble();
         System.out.print("Input jari-jari: ");
-        jariJari = scanner.nextInt();
+        jariJari = scanner.nextDouble();
     }
 
     @Override

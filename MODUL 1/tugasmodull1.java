@@ -11,7 +11,7 @@ public class tugasmodull1 {
         panel = new JPanel();
         adminButton = new JButton("Login as admin");
         studentButton = new JButton("Login as student");
-        
+
         adminButton.addActionListener(to -> admin());
         studentButton.addActionListener(to -> student());
 
@@ -25,13 +25,23 @@ public class tugasmodull1 {
     }
 
     public void admin() {
-        String username = JOptionPane.showInputDialog("Enter your username:");
-        String password = JOptionPane.showInputDialog("Enter your password:");
+        JTextField usernameField = new JTextField();
+        JPasswordField passwordField = new JPasswordField();
+        Object[] fields = {
+                "Username:", usernameField,
+                "Password:", passwordField
+        };
 
-        if (username != null && password != null && username.equals("admin") && password.equals("admin")) {
-            JOptionPane.showMessageDialog(null, "Login success!");
-        } else {
-            JOptionPane.showMessageDialog(null, "User not found!");
+        int result = JOptionPane.showConfirmDialog(null, fields, "Login as admin", JOptionPane.OK_CANCEL_OPTION);
+        if (result == JOptionPane.OK_OPTION) {
+            String username = usernameField.getText();
+            String password = new String(passwordField.getPassword());
+
+            if (username.equals("admin") && password.equals("admin")) {
+                JOptionPane.showMessageDialog(null, "Login success!");
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid username or password!");
+            }
         }
     }
 
@@ -41,7 +51,7 @@ public class tugasmodull1 {
         if (nim != null && nim.length() == 15) {
             JOptionPane.showMessageDialog(null, "Successful login as student");
         } else {
-            JOptionPane.showMessageDialog(null, "User not found!");
+            JOptionPane.showMessageDialog(null, "Invalid NIM!");
         }
     }
 

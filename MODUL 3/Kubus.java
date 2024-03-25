@@ -20,7 +20,7 @@ public class Kubus extends BangunRuang {
     public void inputNilai(){
         super.inputNilai();
         System.out.print("Input sisi: ");
-        sisi = scanner.nextInt();
+        sisi = scanner.nextDouble();
     }
 
     @Override
