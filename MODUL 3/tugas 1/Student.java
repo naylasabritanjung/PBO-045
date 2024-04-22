@@ -8,6 +8,7 @@ public class Student extends User {
     public Student() {
     }
 
+
     private String name;
     private String faculty;
     private String nim;
